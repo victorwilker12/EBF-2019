@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :students
   get 'backsystem/index'
   # devise_for :users
   devise_for :users, path: '', path_names: { 
