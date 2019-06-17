@@ -30,6 +30,12 @@ gem 'devise'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
+#generate pdf
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
+
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -40,8 +40,11 @@
                                       <th>Idade</th>
                                       <th>Sala</th>
                                   
+                                      <th>Certificados</th>
+                                      <th>Ficha de Inscrição</th>
                                       <th></th>
-                                      <th></th><th></th>
+                                      <th></th>
+                                      <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,7 +53,8 @@
                                       <td><%= student.name %></td>
                                       <td><%= student.age %></td>
                                       <td><%= student.classroom %></td>
-                                     
+                                        <td> <%= link_to 'PDF',pdf_certificate_path(student.id, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%></td>
+                                        <td> <%= link_to 'PDF',pdf_report_path(student.id, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%></td>
                                       <td><%= link_to 'Visualizar', student ,class:'btn btn-primary'%></td>
                                       <td><%= link_to 'Editar', edit_student_path(student)  ,class:'btn btn-primary'%></td>
                                       <td><%= link_to 'Deletar', student, method: :delete, data: { confirm: 'Deseja realmente deletar'} ,class:'btn btn-danger' %></td>

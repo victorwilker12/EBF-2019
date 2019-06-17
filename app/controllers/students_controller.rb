@@ -53,6 +53,39 @@ class StudentsController < ApplicationController
     end
   end
 
+  def certificate
+    @student= Student.find(params[:id])
+
+      respond_to do |format|
+        format.html
+        format.pdf do
+         render pdf: @student.name,
+         template: "backsystem/certificate.html.erb",
+         layout: "pdf.html",
+          orientation: 'Landscape',
+          page_size:    'A4'
+       end
+    end
+
+  end
+
+  def report
+    @student= Student.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+       render pdf: @student.name,
+       template: "students/show.html.erb",
+       layout: "report.html",
+        #orientation: 'Landscape',
+        page_size:    'A4'
+     end
+  end
+
+  end
+
+
   # DELETE /students/1
   # DELETE /students/1.json
   def destroy
