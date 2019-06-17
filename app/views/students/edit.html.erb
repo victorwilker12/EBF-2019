@@ -1,18 +1,48 @@
- <section class="content">
-    <div class="row">
-        <!-- left column -->
-        <div class="col-md-12">
-          <!-- general form elements -->
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Editar Aluno</h3>
+<div class="breadcrumbs">
+    <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>  Editar Aluno :</h1>
+                    </div>
+                </div>
             </div>
-<%= render 'form', student: @student %>
-
-<%= link_to 'Visualizar ', @student ,class:"btn btn-primary"%> |
-<%= link_to 'Voltar', students_path,class:"btn btn-primary" %>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><%= link_to 'Visualizar ', @student ,class:"btn btn-primary"%> |
+                              <%= link_to 'Voltar', students_path,class:"btn btn-primary" %>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>  
-</section>
+    </div>
+</div>
+<div class="content">
+    <div class="animated fadeIn">
+
+
+        <div class="row">
+          
+     
+        
+  
+				<%= render 'form', student: @student %>
+
+
+
+
+     
+
+    </div>
+
+
+</div><!-- .animated -->
+</div>
+
 
 

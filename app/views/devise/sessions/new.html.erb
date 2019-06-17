@@ -1,26 +1,46 @@
 <h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<body class="bg-dark">
+
+    <div class="sufee-login d-flex align-content-center flex-wrap">
+        <div class="container">
+            <div class="login-content">
+                <div class="login-logo">
+                    
+                        <img class="align-content" src="https://efeitodebencao.com/wp-content/uploads/Prancheta-5.png"  height="180" width="180" alt="">
+                    
+                </div>
+                <div class="login-form">
+                          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                          <div class="form-group">
+                            <%= f.label :email %><br />
+                            <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class:"form-control"%>
+                          </div>
+
+                          <div class="form-group">
+                            <%= f.label :password %><br />
+                            <%= f.password_field :password, autocomplete: "current-password",class:"form-control" %>
+                          </div>
+
+                          <% if devise_mapping.rememberable? %>
+                            <div class="checkbox">
+                              <%= f.check_box :remember_me %>
+                              <%= f.label :remember_me %>
+                            </div>
+                          <% end %>
+
+                          <%#= render "devise/shared/links",class:'pull-right' %>
+
+
+                          <div class="form-group">
+                            <%= f.submit "Log in" ,class:"btn btn-success btn-flat m-b-30 m-t-30"%>
+                          </div>
+                          <% end %>
+                </div>
+            </div>
+        </div>
     </div>
-  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</body>
