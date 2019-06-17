@@ -1,410 +1,483 @@
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
- 
-    <!-- Main content -->
-    <section class="content">
-      <!-- Small boxes (Stat box) -->
-      <section class="content">
+<!-- /#left-panel -->
 
-          <!-- SELECT2 EXAMPLE -->
-          <div class="box box-default">
-            <div class="box-header with-border">
-              <h3 class="box-title">Select2</h3>
-    
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label>Minimal</label>
-                    <select class="form-control select2" style="width: 100%;">
-                      <option selected="selected">Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
-                  </div>
-                  <!-- /.form-group -->
-                  <div class="form-group">
-                    <label>Disabled</label>
-                    <select class="form-control select2" disabled="disabled" style="width: 100%;">
-                      <option selected="selected">Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
-                  </div>
-                  <!-- /.form-group -->
-                </div>
-                <!-- /.col -->
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label>Multiple</label>
-                    <select class="form-control select2" multiple="multiple" data-placeholder="Select a State"
-                            style="width: 100%;">
-                      <option>Alabama</option>
-                      <option>Alaska</option>
-                      <option>California</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
-                  </div>
-                  <!-- /.form-group -->
-                  <div class="form-group">
-                    <label>Disabled Result</label>
-                    <select class="form-control select2" style="width: 100%;">
-                      <option selected="selected">Alabama</option>
-                      <option>Alaska</option>
-                      <option disabled="disabled">California (disabled)</option>
-                      <option>Delaware</option>
-                      <option>Tennessee</option>
-                      <option>Texas</option>
-                      <option>Washington</option>
-                    </select>
-                  </div>
-                  <!-- /.form-group -->
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer">
-              Visit <a href="https://select2.github.io/">Select2 documentation</a> for more examples and information about
-              the plugin.
-            </div>
-          </div>
-          <!-- /.box -->
-    
-          <div class="row">
-            <div class="col-md-6">
-    
-              <div class="box box-danger">
-                <div class="box-header">
-                  <h3 class="box-title">Input masks</h3>
-                </div>
-                <div class="box-body">
-                  <!-- Date dd/mm/yyyy -->
-                  <div class="form-group">
-                    <label>Date masks:</label>
-    
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </div>
-                      <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <!-- /.form group -->
-    
-                  <!-- Date mm/dd/yyyy -->
-                  <div class="form-group">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </div>
-                      <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask>
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <!-- /.form group -->
-    
-                  <!-- phone mask -->
-                  <div class="form-group">
-                    <label>US phone mask:</label>
-    
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-phone"></i>
-                      </div>
-                      <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask>
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <!-- /.form group -->
-    
-                  <!-- phone mask -->
-                  <div class="form-group">
-                    <label>Intl US phone mask:</label>
-    
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-phone"></i>
-                      </div>
-                      <input type="text" class="form-control"
-                             data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <!-- /.form group -->
-    
-                  <!-- IP mask -->
-                  <div class="form-group">
-                    <label>IP mask:</label>
-    
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-laptop"></i>
-                      </div>
-                      <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask>
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <!-- /.form group -->
-    
-                </div>
-                <!-- /.box-body -->
-              </div>
-              <!-- /.box -->
-    
-              <div class="box box-info">
-                <div class="box-header">
-                  <h3 class="box-title">Color & Time Picker</h3>
-                </div>
-                <div class="box-body">
-                  <!-- Color Picker -->
-                  <div class="form-group">
-                    <label>Color picker:</label>
-                    <input type="text" class="form-control my-colorpicker1">
-                  </div>
-                  <!-- /.form group -->
-    
-                  <!-- Color Picker -->
-                  <div class="form-group">
-                    <label>Color picker with addon:</label>
-    
-                    <div class="input-group my-colorpicker2">
-                      <input type="text" class="form-control">
-    
-                      <div class="input-group-addon">
-                        <i></i>
-                      </div>
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <!-- /.form group -->
-    
-                  <!-- time Picker -->
-                  <div class="bootstrap-timepicker">
-                    <div class="form-group">
-                      <label>Time picker:</label>
-    
-                      <div class="input-group">
-                        <input type="text" class="form-control timepicker">
-    
-                        <div class="input-group-addon">
-                          <i class="fa fa-clock-o"></i>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Animated -->
+        <div class="animated fadeIn">
+            <!-- Widgets  -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-1">
+                                    <i class="pe-7s-cash"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text">$<span class="count">23569</span></div>
+                                        <div class="stat-heading">Revenue</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <!-- /.input group -->
                     </div>
-                    <!-- /.form group -->
-                  </div>
                 </div>
-                <!-- /.box-body -->
-              </div>
-              <!-- /.box -->
-    
-            </div>
-            <!-- /.col (left) -->
-            <div class="col-md-6">
-              <div class="box box-primary">
-                <div class="box-header">
-                  <h3 class="box-title">Date picker</h3>
-                </div>
-                <div class="box-body">
-                  <!-- Date -->
-                  <div class="form-group">
-                    <label>Date:</label>
-    
-                    <div class="input-group date">
-                      <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </div>
-                      <input type="text" class="form-control pull-right" id="datepicker">
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <!-- /.form group -->
-    
-                  <!-- Date range -->
-                  <div class="form-group">
-                    <label>Date range:</label>
-    
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </div>
-                      <input type="text" class="form-control pull-right" id="reservation">
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <!-- /.form group -->
-    
-                  <!-- Date and time range -->
-                  <div class="form-group">
-                    <label>Date and time range:</label>
-    
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-clock-o"></i>
-                      </div>
-                      <input type="text" class="form-control pull-right" id="reservationtime">
-                    </div>
-                    <!-- /.input group -->
-                  </div>
-                  <!-- /.form group -->
-    
-                  <!-- Date and time range -->
-                  <div class="form-group">
-                    <label>Date range button:</label>
-    
-                    <div class="input-group">
-                      <button type="button" class="btn btn-default pull-right" id="daterange-btn">
-                        <span>
-                          <i class="fa fa-calendar"></i> Date range picker
-                        </span>
-                        <i class="fa fa-caret-down"></i>
-                      </button>
-                    </div>
-                  </div>
-                  <!-- /.form group -->
-    
-                </div>
-                <!-- /.box-body -->
-              </div>
-              <!-- /.box -->
-    
-              <!-- iCheck -->
-              <div class="box box-success">
-                <div class="box-header">
-                  <h3 class="box-title">iCheck - Checkbox &amp; Radio Inputs</h3>
-                </div>
-                <div class="box-body">
-                  <!-- Minimal style -->
-    
-                  <!-- checkbox -->
-                  <div class="form-group">
-                    <label>
-                      <input type="checkbox" class="minimal" checked>
-                    </label>
-                    <label>
-                      <input type="checkbox" class="minimal">
-                    </label>
-                    <label>
-                      <input type="checkbox" class="minimal" disabled>
-                      Minimal skin checkbox
-                    </label>
-                  </div>
-    
-                  <!-- radio -->
-                  <div class="form-group">
-                    <label>
-                      <input type="radio" name="r1" class="minimal" checked>
-                    </label>
-                    <label>
-                      <input type="radio" name="r1" class="minimal">
-                    </label>
-                    <label>
-                      <input type="radio" name="r1" class="minimal" disabled>
-                      Minimal skin radio
-                    </label>
-                  </div>
-    
-                  <!-- Minimal red style -->
-    
-                  <!-- checkbox -->
-                  <div class="form-group">
-                    <label>
-                      <input type="checkbox" class="minimal-red" checked>
-                    </label>
-                    <label>
-                      <input type="checkbox" class="minimal-red">
-                    </label>
-                    <label>
-                      <input type="checkbox" class="minimal-red" disabled>
-                      Minimal red skin checkbox
-                    </label>
-                  </div>
-    
-                  <!-- radio -->
-                  <div class="form-group">
-                    <label>
-                      <input type="radio" name="r2" class="minimal-red" checked>
-                    </label>
-                    <label>
-                      <input type="radio" name="r2" class="minimal-red">
-                    </label>
-                    <label>
-                      <input type="radio" name="r2" class="minimal-red" disabled>
-                      Minimal red skin radio
-                    </label>
-                  </div>
-    
-                  <!-- Minimal red style -->
-    
-                  <!-- checkbox -->
-                  <div class="form-group">
-                    <label>
-                      <input type="checkbox" class="flat-red" checked>
-                    </label>
-                    <label>
-                      <input type="checkbox" class="flat-red">
-                    </label>
-                    <label>
-                      <input type="checkbox" class="flat-red" disabled>
-                      Flat green skin checkbox
-                    </label>
-                  </div>
-    
-                  <!-- radio -->
-                  <div class="form-group">
-                    <label>
-                      <input type="radio" name="r3" class="flat-red" checked>
-                    </label>
-                    <label>
-                      <input type="radio" name="r3" class="flat-red">
-                    </label>
-                    <label>
-                      <input type="radio" name="r3" class="flat-red" disabled>
-                      Flat green skin radio
-                    </label>
-                  </div>
-                </div>
-                <!-- /.box-body -->
-                <div class="box-footer">
-                  Many more skins available. <a href="http://fronteed.com/iCheck/">Documentation</a>
-                </div>
-              </div>
-              <!-- /.box -->
-            </div>
-            <!-- /.col (right) -->
-          </div>
-          <!-- /.row -->
-    
-        </section>
-        <!-- /.cont-->
 
-    </section>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-2">
+                                    <i class="pe-7s-cart"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text"><span class="count">3435</span></div>
+                                        <div class="stat-heading">Sales</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-3">
+                                    <i class="pe-7s-browser"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text"><span class="count">349</span></div>
+                                        <div class="stat-heading">Templates</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="stat-widget-five">
+                                <div class="stat-icon dib flat-color-4">
+                                    <i class="pe-7s-users"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <div class="text-left dib">
+                                        <div class="stat-text"><span class="count">2986</span></div>
+                                        <div class="stat-heading">Clients</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Widgets -->
+            <!--  Traffic  -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="box-title">Traffic </h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="card-body">
+                                    <!-- <canvas id="TrafficChart"></canvas>   -->
+                                    <div id="traffic-chart" class="traffic-chart"></div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="card-body">
+                                    <div class="progress-box progress-1">
+                                        <h4 class="por-title">Visits</h4>
+                                        <div class="por-txt">96,930 Users (40%)</div>
+                                        <div class="progress mb-2" style="height: 5px;">
+                                            <div class="progress-bar bg-flat-color-1" role="progressbar" style="width: 40%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-box progress-2">
+                                        <h4 class="por-title">Bounce Rate</h4>
+                                        <div class="por-txt">3,220 Users (24%)</div>
+                                        <div class="progress mb-2" style="height: 5px;">
+                                            <div class="progress-bar bg-flat-color-2" role="progressbar" style="width: 24%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-box progress-2">
+                                        <h4 class="por-title">Unique Visitors</h4>
+                                        <div class="por-txt">29,658 Users (60%)</div>
+                                        <div class="progress mb-2" style="height: 5px;">
+                                            <div class="progress-bar bg-flat-color-3" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-box progress-2">
+                                        <h4 class="por-title">Targeted  Visitors</h4>
+                                        <div class="por-txt">99,658 Users (90%)</div>
+                                        <div class="progress mb-2" style="height: 5px;">
+                                            <div class="progress-bar bg-flat-color-4" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.card-body -->
+                            </div>
+                        </div> <!-- /.row -->
+                        <div class="card-body"></div>
+                    </div>
+                </div><!-- /# column -->
+            </div>
+            <!--  /Traffic -->
+            <div class="clearfix"></div>
+            <!-- Orders -->
+            <div class="orders">
+                <div class="row">
+                    <div class="col-xl-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="box-title">Orders </h4>
+                            </div>
+                            <div class="card-body--">
+                                <div class="table-stats order-table ov-h">
+                                    <table class="table ">
+                                        <thead>
+                                            <tr>
+                                                <th class="serial">#</th>
+                                                <th class="avatar">Avatar</th>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Product</th>
+                                                <th>Quantity</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="serial">1.</td>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td> #5469 </td>
+                                                <td>  <span class="name">Louis Stanley</span> </td>
+                                                <td> <span class="product">iMax</span> </td>
+                                                <td><span class="count">231</span></td>
+                                                <td>
+                                                    <span class="badge badge-complete">Complete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="serial">2.</td>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/2.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td> #5468 </td>
+                                                <td>  <span class="name">Gregory Dixon</span> </td>
+                                                <td> <span class="product">iPad</span> </td>
+                                                <td><span class="count">250</span></td>
+                                                <td>
+                                                    <span class="badge badge-complete">Complete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="serial">3.</td>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/3.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td> #5467 </td>
+                                                <td>  <span class="name">Catherine Dixon</span> </td>
+                                                <td> <span class="product">SSD</span> </td>
+                                                <td><span class="count">250</span></td>
+                                                <td>
+                                                    <span class="badge badge-complete">Complete</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="serial">4.</td>
+                                                <td class="avatar">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/4.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td> #5466 </td>
+                                                <td>  <span class="name">Mary Silva</span> </td>
+                                                <td> <span class="product">Magic Mouse</span> </td>
+                                                <td><span class="count">250</span></td>
+                                                <td>
+                                                    <span class="badge badge-pending">Pending</span>
+                                                </td>
+                                            </tr>
+                                            <tr class=" pb-0">
+                                                <td class="serial">5.</td>
+                                                <td class="avatar pb-0">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="rounded-circle" src="images/avatar/6.jpg" alt=""></a>
+                                                    </div>
+                                                </td>
+                                                <td> #5465 </td>
+                                                <td>  <span class="name">Johnny Stephens</span> </td>
+                                                <td> <span class="product">Monitor</span> </td>
+                                                <td><span class="count">250</span></td>
+                                                <td>
+                                                    <span class="badge badge-complete">Complete</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> <!-- /.table-stats -->
+                            </div>
+                        </div> <!-- /.card -->
+                    </div>  <!-- /.col-lg-8 -->
+
+                    <div class="col-xl-4">
+                        <div class="row">
+                            <div class="col-lg-6 col-xl-12">
+                                <div class="card br-0">
+                                    <div class="card-body">
+                                        <div class="chart-container ov-h">
+                                            <div id="flotPie1" class="float-chart"></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.card -->
+                            </div>
+
+                            <div class="col-lg-6 col-xl-12">
+                                <div class="card bg-flat-color-3  ">
+                                    <div class="card-body">
+                                        <h4 class="card-title m-0  white-color ">August 2018</h4>
+                                    </div>
+                                     <div class="card-body">
+                                         <div id="flotLine5" class="flot-line"></div>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- /.col-md-4 -->
+                </div>
+            </div>
+            <!-- /.orders -->
+            <!-- To Do and Live Chat -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title box-title">To Do List</h4>
+                            <div class="card-content">
+                                <div class="todo-list">
+                                    <div class="tdl-holder">
+                                        <div class="tdl-content">
+                                            <ul>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox"><i class="check-box"></i><span>Conveniently fabricate interactive technology for ....</span>
+                                                        <a href='#' class="fa fa-times"></a>
+                                                        <a href='#' class="fa fa-pencil"></a>
+                                                        <a href='#' class="fa fa-check"></a>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox"><i class="check-box"></i><span>Creating component page</span>
+                                                        <a href='#' class="fa fa-times"></a>
+                                                        <a href='#' class="fa fa-pencil"></a>
+                                                        <a href='#' class="fa fa-check"></a>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" checked><i class="check-box"></i><span>Follow back those who follow you</span>
+                                                        <a href='#' class="fa fa-times"></a>
+                                                        <a href='#' class="fa fa-pencil"></a>
+                                                        <a href='#' class="fa fa-check"></a>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" checked><i class="check-box"></i><span>Design One page theme</span>
+                                                        <a href='#' class="fa fa-times"></a>
+                                                        <a href='#' class="fa fa-pencil"></a>
+                                                        <a href='#' class="fa fa-check"></a>
+                                                    </label>
+                                                </li>
+
+                                                <li>
+                                                    <label>
+                                                        <input type="checkbox" checked><i class="check-box"></i><span>Creating component page</span>
+                                                        <a href='#' class="fa fa-times"></a>
+                                                        <a href='#' class="fa fa-pencil"></a>
+                                                        <a href='#' class="fa fa-check"></a>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div> <!-- /.todo-list -->
+                            </div>
+                        </div> <!-- /.card-body -->
+                    </div><!-- /.card -->
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title box-title">Live Chat</h4>
+                            <div class="card-content">
+                                <div class="messenger-box">
+                                    <ul>
+                                        <li>
+                                            <div class="msg-received msg-container">
+                                                <div class="avatar">
+                                                   <img src="images/avatar/64-1.jpg" alt="">
+                                                   <div class="send-time">11.11 am</div>
+                                                </div>
+                                                <div class="msg-box">
+                                                    <div class="inner-box">
+                                                        <div class="name">
+                                                            John Doe
+                                                        </div>
+                                                        <div class="meg">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis sunt placeat velit ad reiciendis ipsam
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.msg-received -->
+                                        </li>
+                                        <li>
+                                            <div class="msg-sent msg-container">
+                                                <div class="avatar">
+                                                   <img src="images/avatar/64-2.jpg" alt="">
+                                                   <div class="send-time">11.11 am</div>
+                                                </div>
+                                                <div class="msg-box">
+                                                    <div class="inner-box">
+                                                        <div class="name">
+                                                            John Doe
+                                                        </div>
+                                                        <div class="meg">
+                                                            Hay how are you doing?
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div><!-- /.msg-sent -->
+                                        </li>
+                                    </ul>
+                                    <div class="send-mgs">
+                                        <div class="yourmsg">
+                                            <input class="form-control" type="text">
+                                        </div>
+                                        <button class="btn msg-send-btn">
+                                            <i class="pe-7s-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </div><!-- /.messenger-box -->
+                            </div>
+                        </div> <!-- /.card-body -->
+                    </div><!-- /.card -->
+                </div>
+            </div>
+            <!-- /To Do and Live Chat -->
+            <!-- Calender Chart Weather  -->
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- <h4 class="box-title">Chandler</h4> -->
+                            <div class="calender-cont widget-calender">
+                                <div id="calendar"></div>
+                            </div>
+                        </div>
+                    </div><!-- /.card -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card ov-h">
+                        <div class="card-body bg-flat-color-2">
+                            <div id="flotBarChart" class="float-chart ml-4 mr-4"></div>
+                        </div>
+                        <div id="cellPaiChart" class="float-chart"></div>
+                    </div><!-- /.card -->
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card weather-box">
+                        <h4 class="weather-title box-title">Weather</h4>
+                        <div class="card-body">
+                            <div class="weather-widget">
+                                <div id="weather-one" class="weather-one"></div>
+                            </div>
+                        </div>
+                    </div><!-- /.card -->
+                </div>
+            </div>
+            <!-- /Calender Chart Weather -->
+            <!-- Modal - Calendar - Add New Event -->
+            <div class="modal fade none-border" id="event-modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"><strong>Add New Event</strong></h4>
+                        </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
+                            <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /#event-modal -->
+            <!-- Modal - Calendar - Add Category -->
+            <div class="modal fade none-border" id="add-category">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title"><strong>Add a category </strong></h4>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="control-label">Category Name</label>
+                                        <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label">Choose Category Color</label>
+                                        <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                            <option value="success">Success</option>
+                                            <option value="danger">Danger</option>
+                                            <option value="info">Info</option>
+                                            <option value="pink">Pink</option>
+                                            <option value="primary">Primary</option>
+                                            <option value="warning">Warning</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- /#add-category -->
+        </div>
+        <!-- .animated -->
+    </div>
     <!-- /.content -->
-  </div>
- 
-  <!-- Control Sidebar -->
-
-</div>
-<!-- ./wrapper -->
+    
+   
+    <!-- /.site-footer -->

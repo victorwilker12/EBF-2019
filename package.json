@@ -1,5 +1,8 @@
 {
   "name": "EBF",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@types/jquery": "^3.3.29",
+    "jquery": "^3.4.1"
+  }
 }
