@@ -1,6 +1,18 @@
-<h1>Editing Student</h1>
-
+ <section class="content">
+    <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Editar Aluno</h3>
+            </div>
 <%= render 'form', student: @student %>
 
-<%= link_to 'Show', @student %> |
-<%= link_to 'Back', students_path %>
+<%= link_to 'Visualizar ', @student ,class:"btn btn-primary"%> |
+<%= link_to 'Voltar', students_path,class:"btn btn-primary" %>
+        </div>
+      </div>  
+</section>
+
+

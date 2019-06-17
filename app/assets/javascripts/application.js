@@ -1,8 +1,9 @@
 //= require rails-ujs
 //= require activestorage
-// require bower_components/jquery/dist/jquery.min
+//= require bower_components/jquery/dist/jquery.min
 //= require bower_components/jquery-ui/jquery-ui.min
 //= require bower_components/bootstrap/dist/js/bootstrap.min
+//= require bower_components/datatables.net-bs/js/dataTables.bootstrap.min
 //= require bower_components/raphael/raphael.min
 //= require bower_components/morris.js/morris.min
 //= require bower_components/jquery-sparkline/dist/jquery.sparkline.min
@@ -24,7 +25,17 @@
 
 
 $.widget.bridge('uibutton', $.ui.button);
-
+$(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
 
 
 

@@ -1,62 +1,90 @@
-<%= form_with(model: student, local: true) do |form| %>
-  <% if student.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
 
-      <ul>
-      <% student.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+            <!-- form start -->
+            <%= form_with(model: student, local: true) do |form| %>
+              <% if student.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+                  <ul>
+                  <% student.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
 
-  <div class="field">
-    <%= form.label :age %>
-    <%= form.number_field :age %>
-  </div>
 
-  <div class="field">
-    <%= form.label :classroom %>
-    <%= form.text_field :classroom %>
-  </div>
 
-  <div class="field">
-    <%= form.label :father %>
-    <%= form.text_field :father %>
-  </div>
 
-  <div class="field">
-    <%= form.label :mom %>
-    <%= form.text_field :mom %>
-  </div>
+              <div class="box-body">
+                  <div class="col-md-6">
+                <div class="form-group">
+                
+                    <%= form.label :"Nome:" %><br>
+                    <%= form.text_field :name,class:'form-control' %>
+                  </div>
+                </div>
 
-  <div class="field">
-    <%= form.label :contact %>
-    <%= form.text_field :contact %>
-  </div>
+                   <div class="col-md-6">
 
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
+                  <div class="form-group">
+                    <%= form.label :"Idade:" %><br>
+                    <%= form.number_field :age,class:'form-control' %>
+                  </div>
+                </div>
 
-  <div class="field">
-    <%= form.label :go %>
-    <%= form.text_field :go %>
-  </div>
 
-  <div class="field">
-    <%= form.label :return %>
-    <%= form.text_field :return %>
-  </div>
+                 <div class="col-md-6">
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+                  <div class="form-group">
+                    <%= form.label :"Sala de aula:" %><br>
+                     <%= select("student", "classroom", ['Sala1', 'sala2','sala3','sala4','sala5','sala6','sala7','sala8'], { include_blank: true },class:'form-control') %>
+                    </div>
+                  </div>
+
+                   <div class="col-md-6">
+                  <div class="form-group">
+                    <%= form.label :"Nome do Pai:" %><br>
+                    <%= form.text_field :father,class:'form-control' %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <%= form.label :"Nome da Mãe:" %><br>
+                    <%= form.text_field :mom ,class:'form-control'%>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <%= form.label :"Telefone para contato:" %><br>
+                    <%= form.text_field :contact,class:'form-control' %>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <%= form.label :"Endereço:" %><br>
+                    <%= form.text_field :address ,class:'form-control'%>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <%= form.label :"Como Vai:" %><br>
+                    <%= select("student", "go", ['Pais', 'Sozinho(a)','Outro'], { include_blank: true },class:'form-control') %>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <%= form.label :"Como Volta:" %><br>
+                     <%= select("student", "return", ['Pais', 'Sozinho(a)','Outro'], { include_blank: true },class:'form-control') %>
+                  </div>
+                </div>
+               <div class="col-md-6">
+              <div class="box-footer">
+                <%= form.submit 'Inscrever', class:'btn btn-primary' %>
+
+              </div>
+            </div>
+              <% end %>
+</div>
+ 
