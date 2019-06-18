@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <title>EBF 2019</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <%= stylesheet_link_tag    'report' %>
+
+</head>
+
+<body>
+
+    <div class="CT-Table">
+        <div class="sectionHeader">Inscrição EBF 2019</div>
+        <div class="sectionContent">
+            <table>
+                <tr>
+                    <td><strong>Nome:</strong></td>
+                    <td>
+                        <p>
+
+                            <%= @student.name %>
+                        </p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Idade:</strong>
+                    </td>
+                    <td>
+                        <p>
+
+                            <%= @student.age %>
+                        </p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><strong>Sala de Aula:</strong></td>
+                    <td>
+                        <p>
+
+                            <%= @student.classroom %>
+                        </p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><strong>Nome do Pai:</strong></td>
+                    <td>
+                        <p>
+
+                            <%= @student.father %>
+                        </p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><strong>Nome da Mãe:</strong></td>
+                    <td>
+                        <p>
+
+                            <%= @student.mom %>
+                        </p>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><strong>Contato:</strong></td>
+                    <td>
+                        <p>
+
+                            <%= @student.contact %>
+                        </p>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td> <strong>Endereço:</strong></td>
+                    <td>
+                        <p>
+
+                            <%= @student.address %>
+                        </p>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><strong>Como vai:</strong></td>
+                    <td>
+                        <p>
+
+                            <%= @student.go %>
+                        </p>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td><strong>Como volta:</strong></td>
+                    <td>
+                        <p>
+
+                            <%= @student.return %>
+                        </p>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
