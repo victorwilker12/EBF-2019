@@ -30,11 +30,11 @@ class StudentsController < ApplicationController
 
     respond_to do |format|
       if @student.save
-        format.html { redirect_to @student, notice: 'Student was successfully created.' }
-        format.json { render :show, status: :created, location: @student }
+        format.html { redirect_to students_path, notice: 'Student was successfully created.' }
+        #format.json { render :index, status: :created, location: @student }
       else
         format.html { render :new }
-        format.json { render json: @student.errors, status: :unprocessable_entity }
+        #format.json { render json: @student.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -44,11 +44,11 @@ class StudentsController < ApplicationController
   def update
     respond_to do |format|
       if @student.update(student_params)
-        format.html { redirect_to @student, notice: 'Student was successfully updated.' }
-        format.json { render :show, status: :ok, location: @student }
+        format.html { redirect_to backsystem_frequence_path, notice: 'Student was successfully updated.' }
+        #format.json { render :index, status: :ok, location: @student }
       else
         format.html { render :edit }
-        format.json { render json: @student.errors, status: :unprocessable_entity }
+        #format.json { render json: @student.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -104,6 +104,8 @@ class StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def student_params
-      params.require(:student).permit(:name, :age, :classroom, :father, :mom, :contact, :address, :go, :return)
+      params.require(:student).permit(:name, :age, :classroom, :father, :mom, :contact, :address, :go, :return,day:[])
     end
+
+    #form_params # => { week_selection: { days: ["0", "Mon", "0", "Tue", "0", "0", "0", "0", "0"] }
 end

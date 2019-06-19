@@ -27,7 +27,7 @@
         <div class="animated fadeIn">
             <div class="row">
 
-                <div class="col-md-12">
+                <div class="col-xl-12">
                     <div class="card">
                         <div class="card-header">
                             <strong class="card-title">Alunos: </strong>
@@ -39,10 +39,11 @@
                                       <th>Nome :</th>
                                       <th>Idade</th>
                                       <th>Sala</th>
-                                  
+                                     
                                       <th>Certificados</th>
+                                 
                                       <th>Ficha de Inscrição</th>
-                                      <th></th>
+                                      
                                       <th></th>
                                       <th></th>
                                     </tr>
@@ -53,9 +54,18 @@
                                       <td><%= student.name %></td>
                                       <td><%= student.age %></td>
                                       <td><%= student.classroom %></td>
-                                        <td> <%= link_to 'PDF',pdf_certificate_path(student.id, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%></td>
+                                      <% if  student.day ==  "[\"um\", \"dois\"]"%>
+                                      <td> <%= link_to 'PDF',pdf_certificate_path(student.id, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%></td>
+                                      <%elsif student.day ==  "[\"um\", \"três\"]" %>
+                                      <td> <%= link_to 'PDF',pdf_certificate_path(student.id, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%></td>
+                                      <%elsif student.day ==  "[\"dois\", \"três\"]" %>
+                                      <td> <%= link_to 'PDF',pdf_certificate_path(student.id, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%></td>
+                                      <%else%>
+                                      <td>Não possui Certificado</td>
+                                      <% end %>
+                                        
                                         <td> <%= link_to 'PDF',pdf_report_path(student.id, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%></td>
-                                      <td><%= link_to 'Visualizar', student ,class:'btn btn-primary'%></td>
+                                      <!-- <td><%#= link_to 'Visualizar', student ,class:'btn btn-primary'%></td> -->
                                       <td><%= link_to 'Editar', edit_student_path(student)  ,class:'btn btn-primary'%></td>
                                       <td><%= link_to 'Deletar', student, method: :delete, data: { confirm: 'Deseja realmente deletar'} ,class:'btn btn-danger' %></td>
                                     </tr>
