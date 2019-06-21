@@ -1,32 +1,19 @@
 <div class="col-lg-12">
     <div class="card">
-        <div class="card-header"><strong>Ficha de Inscrição</strong></div>
+        <div class="card-header"> 
+          <% if current_user.email != 'admin@example.com'%>
+          <strong>Ficha de Presença</strong>
+          <%else%>
+          <strong>Ficha de Inscrição</strong>
+          <%end%>
+        </div>
         <div class="card-body card-block">
                     <!-- form start -->
                     <% if current_user.email != 'admin@example.com'%>
                     <%= form_with(model: student, local: true) do |form| %>
-                    <% if student.errors.any? %>
-                      <div id="error_explanation">
-                        <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
-      
-                        <ul>
-                        <% student.errors.full_messages.each do |message| %>
-                          <li><%= message %></li>
-                        <% end %>
-                        </ul>
-                      </div>
-                    <% end %>
-      
-      
-      
-      
+
                     <div class="form-group">
                         <%= form.label :"Presença do Aluno:" %><br>
-                      <%#day = ['Mon', 'Tue']%>
-                      <%# day.each do |day| %>
-                      <%#= form.check_box:day, { multiple: true }, day %>
-                      <%# end %>
-                      <%#= form.text_field :day,class:'form-control' %>
                       
                       <%= check_box_tag 'student[day][]', 'um', checked('um') %>
                       <%= form.label :"1º Dia:" %><br>
@@ -39,7 +26,7 @@
                     </div>
                       
                     <div class="box-footer">
-                      <%= form.submit 'Inscrever', class:'btn btn-primary' %>
+                      <%= form.submit 'Marcar Presença', class:'btn btn-primary' %>
       
                     </div>
                   
@@ -103,7 +90,7 @@
       
                         <div class="form-group">
                           <%= form.label :"Sala de aula:" %><br>
-                           <%= select("student", "classroom", ['Sala1', 'sala2','sala3','sala4','sala5','sala6','sala7','sala8'], { include_blank: true },class:'form-control') %>
+                           <%= select("student", "classroom", ['vermelho', 'roxo','verde','amarela','azul','branco'], { include_blank: true },class:'form-control') %>
                           </div>
                         
                          

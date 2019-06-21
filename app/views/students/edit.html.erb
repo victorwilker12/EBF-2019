@@ -4,7 +4,12 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
+                        <% if current_user.email == "admin@example.com" %>
                         <h1>  Editar Aluno :</h1>
+                        <%else%>
+                        <h1> Aluno : <%= @student.name%></h1>
+                        <% end %>
+                        
                     </div>
                 </div>
             </div>
@@ -12,7 +17,7 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li><%= link_to 'Visualizar ', @student ,class:"btn btn-primary"%> |
+                            <li>
                               <%= link_to 'Voltar', students_path,class:"btn btn-primary" %>
                             </li>
                         </ol>
