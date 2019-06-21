@@ -3,6 +3,53 @@
         <div class="card-header"><strong>Ficha de Inscrição</strong></div>
         <div class="card-body card-block">
                     <!-- form start -->
+                    <% if current_user.email != 'admin@example.com'%>
+                    <%= form_with(model: student, local: true) do |form| %>
+                    <% if student.errors.any? %>
+                      <div id="error_explanation">
+                        <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+      
+                        <ul>
+                        <% student.errors.full_messages.each do |message| %>
+                          <li><%= message %></li>
+                        <% end %>
+                        </ul>
+                      </div>
+                    <% end %>
+      
+      
+      
+      
+                    <div class="form-group">
+                        <%= form.label :"Presença do Aluno:" %><br>
+                      <%#day = ['Mon', 'Tue']%>
+                      <%# day.each do |day| %>
+                      <%#= form.check_box:day, { multiple: true }, day %>
+                      <%# end %>
+                      <%#= form.text_field :day,class:'form-control' %>
+                      
+                      <%= check_box_tag 'student[day][]', 'um', checked('um') %>
+                      <%= form.label :"1º Dia:" %><br>
+                      
+                      <%= check_box_tag 'student[day][]', 'dois', checked('dois') %>
+                      <%= form.label :"2º Dia:" %><br>
+                      
+                      <%= check_box_tag 'student[day][]', 'três', checked('três') %>
+                      <%= form.label :"3º Dia:" %><br>
+                    </div>
+                      
+                    <div class="box-footer">
+                      <%= form.submit 'Inscrever', class:'btn btn-primary' %>
+      
+                    </div>
+                  
+                    <% end %>
+        </div>
+    </div>
+</div>
+
+                    <%else%>
+
                     <%= form_with(model: student, local: true) do |form| %>
                     <% if student.errors.any? %>
                       <div id="error_explanation">
@@ -111,3 +158,8 @@
   
 
  
+
+
+
+                    <% end %>
+                  

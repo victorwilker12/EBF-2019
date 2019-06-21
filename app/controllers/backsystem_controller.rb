@@ -3,14 +3,14 @@ class BacksystemController < ApplicationController
   before_action :authenticate_user!
   before_action :set_student, only: [:show, :edit, :update, :destroy]
   def index
-    @student = Student.all 
+    @students = Student.all 
   end
   def frequence
-    @student = Student.all
+    @students = Student.all
   end
 
   def edit
-    @student= Student.all
+   
   end
   # PATCH/PUT /students/1
   # PATCH/PUT /students/1.json

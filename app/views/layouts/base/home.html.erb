@@ -4,15 +4,17 @@
     <title>EBF 2019</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="icon" type="image/png" href="./images/ebf2019.png">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="apple-mobile-web-app-capable" content="yes"></head>
   </head>
 
   <body >
-    <% if current_user.email == 'admin@example.com' %>
+    <% if current_user.email != 'admin@example.com' %>
     <%= render partial: "backsystem/sidebar" %>
     <!-- Right Panel -->
       <div id="right-panel" class="right-panel">

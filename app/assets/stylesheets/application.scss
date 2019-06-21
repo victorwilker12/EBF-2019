@@ -17,6 +17,14 @@
     @import "https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css";
 
 
+
+    @media (max-width: 780px) {
+        .right-panel {
+            background: #f1f2f7;
+            margin-left: 0px!important;
+            margin-top: 55px; }
+        }
+
   
     #weatherWidget .currentDesc {
         color: #ffffff!important;
@@ -52,4 +60,4 @@
             height: 160px;
         }
 
-    
+   

@@ -35,6 +35,10 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
 
+# PWA gem 
+gem 'materializecss'
+gem 'jquery-rails'
+gem 'serviceworker-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

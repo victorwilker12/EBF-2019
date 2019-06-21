@@ -41,10 +41,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <% @student.each do |student| %>
+                                    <% @students.each do |student| %>
                                     <tr>
                                       <td><%= student.name %></td>
-                                      <td><%= link_to 'Frequência', backsystem_edit_path(student)  ,class:'btn btn-primary'%></td>
+                                      <td><%= link_to 'Frequência',edit_student_path(student)  ,class:'btn btn-primary'%></td>
                                    
                                     </tr>
                                   <% end %>
