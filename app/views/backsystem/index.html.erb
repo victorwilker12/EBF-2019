@@ -1,129 +1,247 @@
-
 <!-- /#left-panel -->
 
 <% if current_user.email != "admin@example.com" %>
-     <!-- Content -->
-     <div class="content">
-            <!-- Animated -->
-            <div class="animated fadeIn">
-                <!-- Widgets  -->
-                <div class="row">
-    
-                    <div class="col-lg-12 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="stat-widget-five">
-                                    <div class="stat-icon dib flat-color-4">
-                                        <i class="pe-7s-users"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="text-left dib">
-                                            
-                                        
-                                            <div class="stat-heading">
-                                                <h2>Sistema de Frequência da EBF</h2>
-                                                
-                                            </div>
-                                        </div>
+<!-- Content -->
+<div class="content">
+    <!-- Animated -->
+    <div class="animated fadeIn">
+        <!-- Widgets  -->
+        <div class="row">
+
+            <div class="col-lg-12 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-4">
+                                <i class="pe-7s-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+
+
+                                    <div class="stat-heading">
+                                        <h2>Sistema de Frequência da EBF</h2>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /Widgets -->
-    
-         
-          
             </div>
-            <!-- .animated -->
         </div>
-        <!-- /.content -->
-        
+        <!-- /Widgets -->
+
+
+
+    </div>
+    <!-- .animated -->
+</div>
+<!-- /.content -->
+
 <% else %>
-  
-    <!-- Content -->
-    <div class="content">
-            <!-- Animated -->
-            <div class="animated fadeIn">
-                <!-- Widgets  -->
-                <div class="row">
-    
-                    <div class="col-lg-12 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="stat-widget-five">
-                                    <div class="stat-icon dib flat-color-4">
-                                        <i class="pe-7s-users"></i>
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="text-left dib">
-                                            
-                                            <div class="stat-text"><span class="count"><%= @students.ids.size%></span></div>
-                                            <div class="stat-heading">Total de Alunos</div>
-                                        </div>
+
+<!-- Content -->
+<div class="content">
+    <!-- Animated -->
+    <div class="animated fadeIn">
+        <!-- Widgets  -->
+        <div class="row">
+
+            <div class="col-lg-12 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-4">
+                                <i class="pe-7s-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+
+                                    <div class="stat-text"><span class="count"><%= @students.ids.size%></span></div>
+                                    <div class="stat-heading">Total de Alunos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-12 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-1">
+                                <i class="ti-check"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-heading ">
+                                        <h1>Total de Presenças por Dia</h1>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /Widgets -->
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <%cont=0%>
+            <%cont1=0%>
+            <%cont2=0%>
+            <% @students.each do |student| %>
+
+                <% if  student.day ==  "[\"um\"]"%>
+                    <%cont=cont+1%>
+                <% elsif  student.day ==  "[\"um\", \"dois\"]"%>
+                    <%cont=cont+1%>
+                    <%cont1=cont1+1%>
+                <% elsif  student.day ==  "[\"um\", \"três\"]"%>
+                    <%cont=cont+1%>
+                    <%cont2=cont2+1%>
+                <% elsif  student.day == "[\"um\", \"dois\", \"três\"]"%>
+                    <%cont=cont+1%>
+                    <%cont1=cont1+1%>
+                    <%cont2=cont2+1%>
+                <% elsif  student.day == "[\"dois\"]"%>
+                    <%cont1=cont1+1%>
+                <% elsif  student.day == "[\"dois\", \"três\"]"%>
+                    <%cont1=cont1+1%>
+                    <%cont2=cont2+1%>
+                <% elsif  student.day == "[\"três\"]"%>
+                <%cont2=cont2+1%>
+                <% else %>
+                <% end %>
+
+            <% end %>
             
-                <!-- Orders -->
-                <div class="orders">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="box-title">Orders </h4>
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-1">
+                                <i class=" ti-mobile"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+
+                                    <div class="stat-text"><span class="count"><%=cont%></span></div>
+                                    <div class="stat-heading">1º Dia</div>
                                 </div>
-                                <div class="card-body--">
-                                    <div class="table-stats order-table ov-h">
-                                        <table class="table ">
-                                            <thead>
-                                                <tr>
-                                                    
-                                                    <th class="avatar">Sala</th>
-                                                    
-                                                    <th>Numero de Alunos</th>
-                                                   
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                
-                                                       <tr>                                       
-                                                        <td class="avatar">
-                                                            <div class="round-img">
-                                                                <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg" alt=""></a>
-                                                            </div>
-                                                        </td>
-                                                        <td><span class="count">231</span></td>
-                                                    </tr>
-                                        
-                                              
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- /.table-stats -->
-                                </div>
-                            </div> <!-- /.card -->
-                        </div>  <!-- /.col-lg-8 -->
-    
-    
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- /.orders -->
-              
-         
-          
             </div>
-            <!-- .animated -->
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-6">
+                                <i class="ti-facebook"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+
+                                    <div class="stat-text"><span class="count"><%=cont1%></span></div>
+                                    <div class="stat-heading">2º Dia </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-2">
+                                <i class="ti-youtube"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+
+                                    <div class="stat-text"><span class="count"><%=cont2%></span></div>
+                                    <div class="stat-heading">3º Dia</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        <!-- /.content -->
-        
+
+
+
+        <!-- /Widgets -->
+
+
+        <!-- Orders -->
+        <div class="orders">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="box-title">Orders </h4>
+                        </div>
+                        <div class="card-body--">
+                            <div class="table-stats order-table ov-h">
+                                <table class="table ">
+                                    <thead>
+                                        <tr>
+
+                                            <th class="avatar">Sala</th>
+
+                                            <th>Numero de Alunos</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td class="avatar">
+                                                <div class="round-img">
+                                                    <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg"
+                                                            alt=""></a>
+                                                </div>
+                                            </td>
+                                            <td><span class="count">231</span></td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div> <!-- /.table-stats -->
+                        </div>
+                    </div> <!-- /.card -->
+                </div> <!-- /.col-lg-8 -->
+
+
+            </div>
+        </div>
+        <!-- /.orders -->
+
+
+
+    </div>
+    <!-- .animated -->
+</div>
+<!-- /.content -->
+
 
 
 <% end %>
-    
-   
-    <!-- /.site-footer -->
+
+
+<!-- /.site-footer -->
