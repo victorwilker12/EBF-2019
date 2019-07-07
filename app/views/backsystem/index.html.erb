@@ -200,25 +200,121 @@
                                 <table class="table ">
                                     <thead>
                                         <tr>
-
                                             <th class="avatar">Sala</th>
-
                                             <th>Numero de Alunos</th>
-
                                         </tr>
                                     </thead>
                                     <tbody>
-
+                                        <%x1 = x2 = x3 = x4 = x5 = x6 = x7 = x8 = x9= x10 =  0%>
+                                        <% @students.each do |student| %>
+                                            <% if student.classroom == "laranja1(2-4)"%>
+                                                <%x1=x1+1%>
+                                            <%elsif student.classroom == "laranja2(2-4)"%>
+                                                <%x2=x2+1  %> 
+                                            <%elsif student.classroom == "roxo1(5-6)"%>
+                                                <%x3=x3+1%>
+                                            <%elsif student.classroom == "roxo2(5-6)"  %>
+                                                <%x4=x4+1%>
+                                            <%elsif student.classroom == "verde1(7-8)"%>
+                                                <%x5=x5+1%>
+                                            <%elsif student.classroom == "verde2(7-8)"%>
+                                                <%x6=x6+1%>
+                                            <%elsif student.classroom =="amarelo1(9-10)"%>
+                                                <%x7=x7+1%>
+                                            <%elsif student.classroom =="amarelo2(9-10)"%>
+                                                <%x8=x8+1%>
+                                            <%elsif student.classroom =="azul(11-12)"%>
+                                                <%x9=x9+1%>
+                                            <%elsif student.classroom == "vermelho(13-14)"%>
+                                                <%x10=x10+1%>
+                                            <%else%>
+                                            <%end%>
+                                        <% end %>
+                                                
+                                         
                                         <tr>
                                             <td class="avatar">
                                                 <div class="round-img">
-                                                    <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg"
-                                                            alt=""></a>
+                                                  <p>laranja 1</p>
                                                 </div>
                                             </td>
-                                            <td><span class="count">231</span></td>
+                                            
+                                            <td><span class="count"><%=x1%></span></td>
+                                                                                    
                                         </tr>
-
+                                        <tr>
+                                            <td class="avatar">
+                                                <div class="round-img">
+                                                  <p>laranja 2</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="count"><%=x2%></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="avatar">
+                                                <div class="round-img">
+                                                  <p>roxo 1</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="count"><%=x3%></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="avatar">
+                                                <div class="round-img">
+                                                  <p>roxo 2</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="count"><%=x4%></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="avatar">
+                                                <div class="round-img">
+                                                  <p>verde 1</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="count"><%=x5%></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="avatar">
+                                                <div class="round-img">
+                                                  <p>verde 2</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="count"><%=x6%></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="avatar">
+                                                <div class="round-img">
+                                                  <p>amarelo 1</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="count"><%=x7%></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="avatar">
+                                                <div class="round-img">
+                                                  <p>amarelo 2</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="count"><%=x8%></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="avatar">
+                                                <div class="round-img">
+                                                  <p>Azul</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="count"><%=x9%></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="avatar">
+                                                <div class="round-img">
+                                                  <p>Vermelho</p>
+                                                </div>
+                                            </td>
+                                            <td><span class="count"><%=x10%></span></td>
+                                        </tr>
+                                           
 
                                     </tbody>
                                 </table>
