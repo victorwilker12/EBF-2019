@@ -6,7 +6,7 @@ class BacksystemController < ApplicationController
     @students = Student.all 
   end
  
-
+ 
 
   private
   # Use callbacks to share common setup or constraints between actions.

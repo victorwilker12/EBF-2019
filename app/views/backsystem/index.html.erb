@@ -217,13 +217,21 @@
                                     <thead>
                                         <tr>
                                             <th class="">Sala</th>
+                                            <th>Frequência</th>
                                             <th>Numero de Alunos</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                         <tr>
+                                            <td class="">
+                                                <div class="round-img">
+                                                  <p>laranja 1</p>
+                                                </div>
+                                            </td>
                                         <%x1 = x2 = x3 = x4 = x5 = x6 = x7 = x8 = x9= x10 =  0%>
                                         <% @students.each do |student| %>
                                             <% if student.classroom == "laranja1(2-4)"%>
+
                                                 <%x1=x1+1%>
                                             <%elsif student.classroom == "laranja2(2-4)"%>
                                                 <%x2=x2+1  %> 
@@ -247,14 +255,10 @@
                                             <%end%>
                                         <% end %>
                                                 
-                                         
-                                        <tr>
-                                            <td class="">
-                                                <div class="round-img">
-                                                  <p>laranja 1</p>
-                                                </div>
+                                             <td>
+                                            <%= link_to 'PDF', laranja1_report_path(@student, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%>
                                             </td>
-                                            
+                                       
                                             <td><span class="count"><%=x1%></span></td>
                                                                                     
                                         </tr>
@@ -264,6 +268,9 @@
                                                   <p>laranja 2</p>
                                                 </div>
                                             </td>
+                                              <td>
+                                            <%= link_to 'PDF', l2_path(@student, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%>
+                                            </td>
                                             <td><span class="count"><%=x2%></span></td>
                                         </tr>
                                         <tr>
@@ -272,6 +279,10 @@
                                                   <p>roxo 1</p>
                                                 </div>
                                             </td>
+                                            <td>
+                                            <%= link_to 'PDF', r1_path(@student, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%>
+                                            </td>
+
                                             <td><span class="count"><%=x3%></span></td>
                                         </tr>
                                         <tr>
@@ -280,6 +291,10 @@
                                                   <p>roxo 2</p>
                                                 </div>
                                             </td>
+                                             <td>
+                                            <%= link_to 'PDF', r2_path(@student, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%>
+                                            </td>
+
                                             <td><span class="count"><%=x4%></span></td>
                                         </tr>
                                         <tr>
@@ -287,6 +302,9 @@
                                                 <div class="round-img">
                                                   <p>verde 1</p>
                                                 </div>
+                                            </td>
+                                              <td>
+                                            <%= link_to 'PDF', v1_path(@student, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%>
                                             </td>
                                             <td><span class="count"><%=x5%></span></td>
                                         </tr>
@@ -296,6 +314,9 @@
                                                   <p>verde 2</p>
                                                 </div>
                                             </td>
+                                              <td>
+                                            <%= link_to 'PDF', v2_path(@student, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%>
+                                            </td>
                                             <td><span class="count"><%=x6%></span></td>
                                         </tr>
                                         <tr>
@@ -303,6 +324,9 @@
                                                 <div class="round-img">
                                                   <p>amarelo 1</p>
                                                 </div>
+                                            </td>
+                                             <td>
+                                            <%= link_to 'PDF', a1_path(@student, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%>
                                             </td>
                                             <td><span class="count"><%=x7%></span></td>
                                         </tr>
@@ -312,6 +336,9 @@
                                                   <p>amarelo 2</p>
                                                 </div>
                                             </td>
+                                             <td>
+                                            <%= link_to 'PDF', a2_path(@student, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%>
+                                            </td>
                                             <td><span class="count"><%=x8%></span></td>
                                         </tr>
                                         <tr>
@@ -320,6 +347,9 @@
                                                   <p>Azul</p>
                                                 </div>
                                             </td>
+                                             <td>
+                                            <%= link_to 'PDF', az_path(@student, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%>
+                                            </td>
                                             <td><span class="count"><%=x9%></span></td>
                                         </tr>
                                         <tr>
@@ -327,6 +357,9 @@
                                                 <div class="round-img">
                                                   <p>Vermelho</p>
                                                 </div>
+                                            </td>
+                                              <td>
+                                            <%= link_to 'PDF', ve_path(@student, :format => :pdf), target:'_blank',class:'btn btn-outline-success'%>
                                             </td>
                                             <td><span class="count"><%=x10%></span></td>
                                         </tr>

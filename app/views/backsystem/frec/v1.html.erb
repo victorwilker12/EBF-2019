@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+    <title><%=@student.name%></title>
+     <%= wicked_pdf_stylesheet_link_tag 'application'%>
+  </head>
+
+  <body>
+        <!-- Orders -->
+        <div class="orders">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card">
+                       <div style="text-align: center;">
+                            <h2 class="box-title">Frequência : Verde 1</h2>
+                       </div>
+                           
+                        
+                        <div class="card-body--">
+                            <div class="table-stats order-table ov-h">
+                                <table  style="width:100%" class="table ">
+                                    <thead  >
+                                        <tr>
+                                            <th >Alunos</th>
+                                         
+                                            <th>Dia 1</th>
+                                            <th>Dia 2</th>
+                                            <th>Dia 3</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                            
+                                        <% @student.each do |student| %>
+                                            <% if student.classroom == "verde1(7-8)"%>
+                                             <tr>
+                                            <td class="">
+                                                <div class="">
+                                                  <p><%=student.name%></p>
+                                                  
+                                            </div>
+                                            </td>
+                                                 <td><span class="">
+                                                 <input  style="float: right;"  type = "checkbox" id = "subscribeNews" nome = "subscribe" value = "newsletter"></span></td>
+
+                                                <td><span style="float: right;" class=""> <input type = "checkbox" id = "subscribeNews" nome = "subscribe" value = "newsletter"></span></td>  
+                                                <td><span class=""><input type = "checkbox" id = "subscribeNews" nome = "subscribe" value = "newsletter"></span></td>                                
+                                 </tr>
+                                
+                                            <%end%>
+                                        <% end %>
+                                                
+                                            
+                                       
+                                           
+                                                                                    
+                                        
+
+                                    </tbody>
+                                </table>
+                            </div> <!-- /.table-stats -->
+                        </div>
+                    </div> <!-- /.card -->
+                </div> <!-- /.col-lg-8 -->
+
+
+            </div>
+        </div>
+        <!-- /.orders -->
+  </body>
+</html>
+
+
+ 
