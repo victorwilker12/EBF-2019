@@ -1,13 +1,8 @@
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon/icomoon.eot?-rdnm34');
-	src:url('../fonts/icomoon/icomoon.eot?#iefix-rdnm34') format('embedded-opentype'),
-		url('../fonts/icomoon/icomoon.woff?-rdnm34') format('woff'),
-		url('../fonts/icomoon/icomoon.ttf?-rdnm34') format('truetype'),
-		url('../fonts/icomoon/icomoon.svg?-rdnm34#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+/* Googel Fonts End  
+
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 
 div.cs-skin-elastic {
 	background: transparent;
@@ -26,7 +21,7 @@ div.cs-skin-elastic {
 }
 
 .cs-skin-elastic > span::after {
-	font-family: 'icomoon';
+	font-family: "Open Sans", sans-serif;
 	content: '\e005';
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
