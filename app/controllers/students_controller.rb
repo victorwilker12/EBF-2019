@@ -62,7 +62,7 @@ class StudentsController < ApplicationController
          render pdf: @student.name,
          template: "backsystem/certificate.html.erb",
          layout: "pdf.html",
-          orientation: 'Landscape',
+         # orientation: 'Landscape',
           page_size:    'A4'
        end
     end

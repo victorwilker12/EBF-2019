@@ -1,13 +1,13 @@
 body{
-    height: 880px;
-    background-image: url('/images/model.jpg')!important;
+    height: 1300px;
+    background-image: url('/CERTIFICADO.jpg')!important;
     background-image:no-repeat!important; 
     background-size:100% 100%; 
 }
 h3{
     position: relative;
-    top:740px;
-    left: -300px;
+    padding-top:400px;
+    padding-left: -300px;
 	font-size: 25px;
 	color: black!important;
 	text-align: center;
